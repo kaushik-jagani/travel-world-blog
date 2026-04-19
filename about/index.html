@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Travel World &mdash; Global Travel Blog</title>
+  <meta name="description" content="Learn about Travel World &mdash; a global Travel blog covering travel markets, trends, and insights from cities worldwide.">
+  <meta property="og:title" content="About Travel World &mdash; Global Travel Blog">
+  <meta property="og:description" content="Travel World is an independent blog covering Travel markets, travel trends, and buying guides for cities around the world.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/about">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQFMWPTPDS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQFMWPTPDS');
+  </script>
+
+  <!-- Theme JS -->
+  <script src="../assets/js/theme.js"></script>
+
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0a1f1a 0%, #0d1a15 100%);
+      padding: var(--sp-16) 0 var(--sp-12);
+      text-align: center;
+      color: #fff;
+    }
+    .page-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      margin-bottom: var(--sp-4);
+      line-height: 1.1;
+      color: #fff;
+    }
+    .page-hero p {
+      font-size: clamp(16px, 2vw, 19px);
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .page-hero .hero-accent {
+      color: #34D399;
+    }
+
+    .about-section {
+      padding: var(--sp-12) 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-10);
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3.5vw, 34px);
+      margin-bottom: var(--sp-5);
+    }
+    .about-text p {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--sp-4);
+    }
+    .about-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    .about-img img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Stats row */
+    .stats-section {
+      padding: var(--sp-10) 0;
+      background: var(--color-bg-secondary);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-6);
+      text-align: center;
+    }
+    .stat-item {}
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: var(--sp-2);
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* Mission / Values */
+    .values-section { padding: var(--sp-12) 0; }
+    .values-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3.5vw, 36px);
+      text-align: center;
+      margin-bottom: var(--sp-8);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+    }
+    .value-card {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-7);
+      text-align: center;
+      transition: all var(--t-base);
+    }
+    .value-card:hover {
+      border-color: rgba(16,185,129,0.35);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-icon {
+      font-size: 36px;
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+    .value-card h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      margin-bottom: var(--sp-3);
+      color: var(--color-text);
+    }
+    .value-card p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Team */
+    .team-section { padding: var(--sp-12) 0; background: var(--color-bg-secondary); }
+    .team-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3.5vw, 36px);
+      text-align: center;
+      margin-bottom: var(--sp-8);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-6);
+    }
+    .team-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-6) var(--sp-5);
+      text-align: center;
+      transition: all var(--t-base);
+    }
+    .team-card:hover {
+      border-color: rgba(16,185,129,0.3);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--sp-4);
+      box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+    }
+    .team-name {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--color-text);
+    }
+    .team-role {
+      font-size: 13px;
+      color: var(--color-primary);
+      font-weight: 500;
+      margin-bottom: var(--sp-3);
+    }
+    .team-bio {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: var(--sp-12) 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 36px);
+      margin-bottom: var(--sp-4);
+    }
+    .cta-section p {
+      color: var(--color-text-secondary);
+      font-size: 16px;
+      margin-bottom: var(--sp-6);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(16,185,129,0.35);
+      transition: all var(--t-base);
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(16,185,129,0.45);
+      color: #fff;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--color-bg-secondary);
+      border-top: 1px solid var(--color-border);
+      padding: var(--sp-8) 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--sp-4);
+    }
+    .footer-brand { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--color-text); }
+    .footer-brand span { color: var(--color-primary); }
+    .footer-copy { font-size: 13px; color: var(--color-text-muted); }
+    .footer-nav { display: flex; gap: var(--sp-5); flex-wrap: wrap; }
+    .footer-link { font-size: 13px; color: var(--color-text-secondary); transition: color var(--t-base); }
+    .footer-link:hover { color: var(--color-primary); }
+
+    @media (max-width: 1024px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Travel World home">
+        <span class="logo-text">Travel<span class="logo-accent"> World</span></span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog" class="nav-link">Travel</a>
+        <a href="/about" class="nav-link active">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode" type="button">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button id="hamburger-btn" class="icon-btn" aria-label="Open navigation menu" aria-expanded="false" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <button id="drawer-close-btn" class="icon-btn drawer-close-btn" aria-label="Close menu" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="drawer-logo">Travel<span> World</span></span>
+    <nav aria-label="Mobile navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/blog" class="nav-link">Travel</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About <span class="hero-accent">Travel World</span></h1>
+      <p>Your go-to blog for travel guides, destination reviews, trip planning tips, and adventure inspiration from around the globe.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Who We Are</h2>
+          <p>Travel World is an independent Travel blog dedicated to providing high-quality, well-researched content about destinations and travel experiences across the globe. From Bali to Paris, Tokyo to New York &mdash; we cover travel tips, destination guides, budget planning, and adventure inspiration for travelers worldwide.</p>
+          <p>We are not a travel agency, booking platform, or tour operator. We do not sell flights or hotel bookings. Our sole focus is creating informative, reader-first blog content that helps people plan unforgettable trips and explore the world with confidence.</p>
+          <p>Every article published on Travel World is thoroughly researched, fact-checked, and written in clear, accessible language. Whether you are curious about budget travel hacks, luxury getaway ideas, hidden gems, or city guides &mdash; we have you covered.</p>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Beautiful travel destination landscape" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">In-Depth Articles</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Destinations Covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Years of Publishing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VALUES -->
+  <section class="values-section">
+    <div class="container">
+      <h2>Our Editorial Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon">&#127919;</span>
+          <h3>Accuracy First</h3>
+          <p>Every statistic, price figure, and regulatory detail is verified against official and reputable sources before publication. We take accuracy seriously.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">&#128221;</span>
+          <h3>Independent &amp; Unbiased</h3>
+          <p>We are not affiliated with any travel agency, airline, or hotel chain. We receive no commission fees. Our editorial independence is non-negotiable.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">&#127757;</span>
+          <h3>Global Perspective</h3>
+          <p>Travel is a universal passion. We cover destinations and travel tips from every continent, giving readers a truly global view.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Travel<span> World</span></span>
+      <p class="footer-copy">&copy; 2026 GlobalInfoNest. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/blog" class="footer-link">Blog</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+        <a href="/disclaimer" class="footer-link">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/header.js" defer></script>
+
+</body>
+</html>

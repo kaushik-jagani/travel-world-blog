@@ -1,0 +1,20 @@
+{
+  "siteName": "Travel World",
+  "tagline": "Your Trusted Guide to Travel & Adventures Worldwide",
+  "logoText": "Travel World",
+  "nav": [
+    { "label": "Home", "href": "/index.html" },
+    { "label": "Travel", "href": "/pages/blog-list.html" }
+  ],
+  "social": {
+    "twitter": "https://twitter.com/TravelWorld",
+    "linkedin": "https://linkedin.com/company/TravelWorld"
+  },
+  "footer": {
+    "text": "© 2026 GlobalInfoNest. All rights reserved. Inspiring your next adventure.",
+    "links": [
+      { "label": "Contact Us", "href": "#" },
+      { "label": "Privacy Policy", "href": "#" }
+    ]
+  }
+}

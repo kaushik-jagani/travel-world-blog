@@ -1,0 +1,4 @@
+# Netlify redirects
+# Physical files take priority, so blog/index.html serves /blog/
+# This catch-all handles any /blog/slug/ that doesn't have a physical folder
+/blog/*  /pages/blog-post.html  200

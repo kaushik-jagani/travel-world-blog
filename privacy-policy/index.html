@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Travel World</title>
+  <meta name="description" content="Travel World's Privacy Policy &mdash; how we collect, use, and protect your personal information in accordance with applicable data protection laws.">
+  <meta property="og:title" content="Privacy Policy | Travel World">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/privacy-policy">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQFMWPTPDS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQFMWPTPDS');
+  </script>
+  <script src="../assets/js/theme.js"></script>
+
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0a1f1a 0%, #0d1a15 100%);
+      padding: var(--sp-14) 0 var(--sp-10);
+      text-align: center;
+      color: #fff;
+    }
+    .page-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      margin-bottom: var(--sp-3);
+      color: #fff;
+    }
+    .page-hero .meta-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+    }
+    .page-hero .meta-text strong { color: rgba(255,255,255,0.75); }
+
+    .legal-page { padding: var(--sp-12) 0; }
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: var(--sp-10);
+      align-items: start;
+    }
+    /* Sticky TOC */
+    .legal-toc {
+      position: sticky;
+      top: calc(var(--header-height) + var(--sp-5));
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+    }
+    .legal-toc h3 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-muted);
+      margin-bottom: var(--sp-4);
+    }
+    .legal-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc-counter; }
+    .legal-toc ol li { counter-increment: toc-counter; }
+    .legal-toc ol li a {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      padding: 5px 8px;
+      border-radius: var(--radius-sm);
+      transition: all var(--t-base);
+      line-height: 1.4;
+    }
+    .legal-toc ol li a::before {
+      content: counter(toc-counter) ".";
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .legal-toc ol li a:hover { background: var(--color-primary-light); color: var(--color-primary-dark); }
+
+    /* Content */
+    .legal-content { max-width: 720px; }
+    .legal-content h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2.5vw, 22px);
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-3);
+      border-bottom: 2px solid var(--color-border);
+      scroll-margin-top: calc(var(--header-height) + 16px);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+    .section-num {
+      width: 30px; height: 30px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .legal-content p { font-size: 15px; color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--sp-4); }
+    .legal-content ul { margin-bottom: var(--sp-5); padding-left: var(--sp-5); }
+    .legal-content li { font-size: 15px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: var(--sp-2); }
+    .legal-content li::marker { color: var(--color-primary); }
+    .legal-content h3 { font-family: var(--font-heading); font-size: 17px; margin: var(--sp-6) 0 var(--sp-3); color: var(--color-text); }
+    .legal-content a { color: var(--color-primary); }
+    .legal-content a:hover { text-decoration: underline; }
+
+    .info-box {
+      background: rgba(16,185,129,0.07);
+      border: 1px solid rgba(16,185,129,0.2);
+      border-left: 4px solid var(--color-primary);
+      border-radius: var(--radius-md);
+      padding: var(--sp-5);
+      margin: var(--sp-6) 0;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .info-box strong { color: var(--color-text); }
+
+    /* Footer */
+    .site-footer { background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); padding: var(--sp-8) 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-4); }
+    .footer-brand { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--color-text); }
+    .footer-brand span { color: var(--color-primary); }
+    .footer-copy { font-size: 13px; color: var(--color-text-muted); }
+    .footer-nav { display: flex; gap: var(--sp-5); flex-wrap: wrap; }
+    .footer-link { font-size: 13px; color: var(--color-text-secondary); transition: color var(--t-base); }
+    .footer-link:hover { color: var(--color-primary); }
+
+    @media (max-width: 768px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .legal-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Travel World home">
+        <span class="logo-text">Travel<span class="logo-accent"> World</span></span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog" class="nav-link">Travel</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode" type="button">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button id="hamburger-btn" class="icon-btn" aria-label="Open navigation menu" aria-expanded="false" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <button id="drawer-close-btn" class="icon-btn drawer-close-btn" aria-label="Close menu" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="drawer-logo">Travel<span> World</span></span>
+    <nav aria-label="Mobile navigation"><a href="/" class="nav-link">Home</a><a href="/blog" class="nav-link">Travel</a><a href="/about" class="nav-link">About</a><a href="/contact" class="nav-link">Contact</a></nav>
+  </aside>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="meta-text">Effective date: <strong>1 January 2024</strong> &nbsp;|&nbsp; Last updated: <strong>18 April 2026</strong></p>
+    </div>
+  </section>
+
+  <section class="legal-page">
+    <div class="container">
+      <div class="legal-layout">
+
+        <!-- TOC -->
+        <nav class="legal-toc" aria-label="Privacy policy sections">
+          <h3>Contents</h3>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#information-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use">How We Use Your Information</a></li>
+            <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+            <li><a href="#third-parties">Third-Party Services</a></li>
+            <li><a href="#google-adsense">Google AdSense</a></li>
+            <li><a href="#data-sharing">Data Sharing</a></li>
+            <li><a href="#your-rights">Your Rights</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#childrens-privacy">Children's Privacy</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <!-- Content -->
+        <div class="legal-content">
+
+          <div class="info-box">
+            <strong>Summary:</strong> Travel World is committed to protecting your privacy. We collect minimal data, use it only to improve your experience, and never sell your personal information. This policy explains what data we collect, why, and how you can control it.
+          </div>
+
+          <h2 id="overview"><span class="section-num">1</span> Overview</h2>
+          <p>This Privacy Policy describes how Travel World ("we", "us", "our") collects, uses, and shares information when you visit our website at realestateworld.blog ("the Site"). By using the Site, you agree to the practices described in this policy.</p>
+          <p>We operate the Site as an independent Travel blog covering travel markets worldwide. We comply with applicable data protection laws and internationally recognised privacy standards.</p>
+
+          <h2 id="information-we-collect"><span class="section-num">2</span> Information We Collect</h2>
+          <h3>2.1 Information You Provide Directly</h3>
+          <p>When you contact us through our Contact form, we collect:</p>
+          <ul>
+            <li>Your name</li>
+            <li>Your email address</li>
+            <li>The subject and content of your message</li>
+          </ul>
+          <h3>2.2 Information Collected Automatically</h3>
+          <p>When you visit our Site, we automatically collect certain technical information including:</p>
+          <ul>
+            <li>IP address (anonymised where possible)</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Referring URL</li>
+            <li>Pages visited and time spent on each page</li>
+            <li>Date and time of your visit</li>
+          </ul>
+          <p>This information is collected via cookies and similar tracking technologies (see Section 4).</p>
+
+          <h2 id="how-we-use"><span class="section-num">3</span> How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Respond to your enquiries and provide customer support</li>
+            <li>Improve the content and user experience of our Site</li>
+            <li>Analyse traffic and reader behaviour using Google Analytics</li>
+            <li>Display relevant advertisements via Google AdSense</li>
+            <li>Detect and prevent fraudulent or abusive behaviour</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+          <p>We do not use your personal data for automated decision-making or profiling that produces legal or similarly significant effects on you.</p>
+
+          <h2 id="cookies"><span class="section-num">4</span> Cookies &amp; Tracking Technologies</h2>
+          <p>Our Site uses the following types of cookies:</p>
+          <ul>
+            <li><strong>Essential cookies:</strong> Required for the Site to function, such as storing your dark/light mode preference (stored in <code>localStorage</code>, not transmitted to our servers).</li>
+            <li><strong>Analytics cookies:</strong> Google Analytics uses cookies to help us understand how visitors use the Site. Analytics data is aggregated and anonymised. You can opt out at <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener noreferrer" target="_blank">tools.google.com/dlpage/gaoptout</a>.</li>
+            <li><strong>Advertising cookies:</strong> Google AdSense uses cookies to show personalised or contextual advertisements. These cookies may track your browsing activity across sites to provide relevant ads.</li>
+          </ul>
+          <p>You can manage or disable cookies through your browser settings. Note that disabling cookies may affect the functionality of some features.</p>
+
+          <h2 id="third-parties"><span class="section-num">5</span> Third-Party Services</h2>
+          <p>We use the following third-party services on our Site:</p>
+          <ul>
+            <li><strong>Google Analytics (Google LLC)</strong> &mdash; Website analytics. <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>Google AdSense (Google LLC)</strong> &mdash; Advertisement delivery. <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">Google Ad Privacy Policy</a></li>
+            <li><strong>Google Fonts</strong> &mdash; Web typography loaded from Google's CDN. <a href="https://developers.google.com/fonts/faq/privacy" rel="noopener noreferrer" target="_blank">Google Fonts Privacy</a></li>
+            <li><strong>Unsplash</strong> &mdash; Stock photography used in article illustrations. <a href="https://unsplash.com/privacy" rel="noopener noreferrer" target="_blank">Unsplash Privacy Policy</a></li>
+          </ul>
+          <p>These services have their own privacy policies and may collect data independently. We encourage you to review their respective policies.</p>
+
+          <h2 id="google-adsense"><span class="section-num">6</span> Google AdSense &amp; Advertising</h2>
+          <p>We use Google AdSense to display advertisements on our Site. Google may use cookies and similar technologies to serve ads based on your prior visits to our Site and other websites on the Internet.</p>
+          <p>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our Site and/or other sites on the Internet.</p>
+          <p>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google Ads Settings</a> or by visiting <a href="https://www.aboutads.info" rel="noopener noreferrer" target="_blank">aboutads.info</a>.</p>
+          <div class="info-box">
+            We comply with Google AdSense programme policies, including requirements around content quality, user experience, and privacy disclosure. We do not display ads alongside prohibited content categories.
+          </div>
+
+          <h2 id="data-sharing"><span class="section-num">7</span> Data Sharing &amp; Disclosure</h2>
+          <p>We do not sell, trade, or rent your personal information to any third party. We may disclose your data only in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service providers:</strong> Trusted vendors who assist in operating our Site, subject to confidentiality agreements.</li>
+            <li><strong>Legal obligations:</strong> When required by law, court order, or government authority.</li>
+            <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction.</li>
+          </ul>
+
+          <h2 id="your-rights"><span class="section-num">8</span> Your Rights</h2>
+          <p>Depending on your jurisdiction, you may have the right to:</p>
+          <ul>
+            <li>Access the personal data we hold about you</li>
+            <li>Request correction of inaccurate data</li>
+            <li>Request deletion of your personal data ("right to be forgotten")</li>
+            <li>Object to or restrict our processing of your data</li>
+            <li>Withdraw consent where processing is based on consent</li>
+          </ul>
+          <p>To exercise any of these rights, please email us at <a href="mailto:privacy@realestateworld.blog">privacy@realestateworld.blog</a>. We will respond within 30 days.</p>
+
+          <h2 id="data-security"><span class="section-num">9</span> Data Security</h2>
+          <p>We implement reasonable technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure and we cannot guarantee absolute security.</p>
+          <p>Our Site uses HTTPS encryption for all data in transit. We do not store sensitive information such as payment card details.</p>
+
+          <h2 id="childrens-privacy"><span class="section-num">10</span> Children's Privacy</h2>
+          <p>Our Site is not directed at children under the age of 13 (or 16 in certain jurisdictions). We do not knowingly collect personal information from children. If you believe your child has provided us with personal data, please contact us and we will promptly delete it.</p>
+
+          <h2 id="changes"><span class="section-num">11</span> Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+          <p>Continued use of the Site after changes are posted constitutes your acceptance of the updated policy.</p>
+
+          <h2 id="contact-us"><span class="section-num">12</span> Contact Us</h2>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:privacy@realestateworld.blog">privacy@realestateworld.blog</a></li>
+            <li><strong>General enquiries:</strong> <a href="mailto:hello@realestateworld.blog">hello@realestateworld.blog</a></li>
+            <li><strong>Business hours:</strong> Sunday &mdash; Friday, 10:00 AM &mdash; 5:00 PM GST</li>
+            <li><strong>Contact form:</strong> <a href="/contact">realestateworld.blog/contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Travel<span> World</span></span>
+      <p class="footer-copy">&copy; 2026 GlobalInfoNest. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/blog" class="footer-link">Blog</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+        <a href="/disclaimer" class="footer-link">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/header.js" defer></script>
+</body>
+</html>

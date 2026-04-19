@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel World &mdash; Global Travel Insights &amp; Blog</title>
+  <meta name="description" content="Travel World is your trusted source for global Travel insights, travel destinations, trip guides, and expert analysis from cities worldwide.">
+  <meta property="og:title" content="Travel World &mdash; Global Travel Insights &amp; Blog">
+  <meta property="og:description" content="Expert Travel blog covering travel destinations, tips, and guides from places around the world.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/blog-list.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQFMWPTPDS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQFMWPTPDS');
+  </script>
+
+  <script src="assets/js/theme.js"></script>
+
+  <style>
+    /* ---- Hero ---- */
+    .home-hero {
+      background: linear-gradient(135deg, #0a1f1a 0%, #0d1a15 100%);
+      padding: clamp(60px, 12vw, 120px) 0 clamp(48px, 8vw, 80px);
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    .home-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 80%, rgba(16,185,129,0.12), transparent);
+      pointer-events: none;
+    }
+    .home-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 6vw, 60px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: var(--sp-5);
+      color: #fff;
+    }
+    .home-hero h1 span { color: #34D399; }
+    .home-hero p {
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0 auto var(--sp-8);
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: linear-gradient(135deg, var(--color-primary), #059669);
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(16,185,129,0.4);
+      transition: all 0.2s;
+    }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(16,185,129,0.5);
+      color: #fff;
+    }
+
+    /* ---- Recent Posts Banner ---- */
+    .recent-section {
+      width: 100%;
+      padding: var(--sp-12) 0;
+      background: var(--color-bg-secondary);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--sp-8);
+    }
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3.5vw, 32px);
+      color: var(--color-text);
+    }
+    .view-all-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .view-all-link:hover { opacity: 0.8; }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Travel World home">
+        <span class="logo-text">Travel<span class="logo-accent"> World</span></span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="/blog" class="nav-link">Travel</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <div class="search-wrapper" role="search">
+          <div class="search-input-wrapper" id="search-input-wrapper">
+            <input type="search" id="search-input" class="search-input" placeholder="Search posts..." aria-label="Search posts" autocomplete="off">
+          </div>
+          <button id="search-toggle-btn" class="icon-btn" aria-label="Toggle search" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode" type="button">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button id="hamburger-btn" class="icon-btn" aria-label="Open navigation menu" aria-expanded="false" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <button id="drawer-close-btn" class="icon-btn drawer-close-btn" aria-label="Close menu" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="drawer-logo">Travel<span> World</span></span>
+    <nav aria-label="Mobile navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/blog" class="nav-link">Travel</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <section class="home-hero">
+    <div class="container">
+      <h1>Your Global Guide to<br><span>Travel</span></h1>
+      <p>Expert travel guides, destination tips, trip planning, and adventure inspiration from around the world &mdash; all in one place.</p>
+      <a href="/blog" class="hero-cta">Explore All Destinations &#8594;</a>
+    </div>
+  </section>
+
+  <!-- RECENT POSTS -->
+  <section class="recent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recent Articles</h2>
+        <a href="/blog" class="view-all-link">View All &#8594;</a>
+      </div>
+      <div class="posts-grid" id="recent-posts-grid"></div>
+    </div>
+  </section>
+
+  <!-- AD SLOT -->
+  <div class="ad-slot-below-header" aria-label="Advertisement" style="margin-top:0;">
+    <!-- AD SLOT -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <a href="/" class="footer-logo">Travel<span> World</span></a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/blog" class="footer-link">Blog</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+        <a href="/disclaimer" class="footer-link">Disclaimer</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 GlobalInfoNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/header.js" defer></script>
+  <script>
+    (function () {
+      'use strict';
+
+      function toAbsolutePath(path) {
+        if (!path) return '';
+        if (/^https?:\/\//i.test(path) || path.indexOf('//') === 0) return path;
+        if (path.charAt(0) === '/') return path;
+        return '/' + String(path).replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+      }
+
+      function esc(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str || ''));
+        return div.innerHTML;
+      }
+
+      function formatDate(dateStr) {
+        try {
+          var d = new Date(dateStr + 'T00:00:00');
+          return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        } catch (e) { return dateStr; }
+      }
+
+      fetch('/data/posts/index.json')
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .catch(function () { return []; })
+        .then(function (posts) {
+          posts.sort(function (a, b) { return (b.date || '').localeCompare(a.date || '') || (b.id || 0) - (a.id || 0); });
+          var recent = posts.slice(0, 6);
+          var grid = document.getElementById('recent-posts-grid');
+          if (!grid || !recent.length) return;
+
+          recent.forEach(function (meta) {
+            var initial = meta.author ? meta.author.charAt(0).toUpperCase() : 'A';
+            var imgSrc = toAbsolutePath(meta.coverImage);
+            var card = document.createElement('a');
+            card.href = '/blog/' + meta.slug;
+            card.className = 'post-card';
+            card.setAttribute('aria-label', meta.title);
+            card.innerHTML =
+              '<div class="post-card-img-wrapper">' +
+                '<img class="post-card-img" src="' + esc(imgSrc) + '" alt="' + esc(meta.title) + '" loading="lazy">' +
+                '<span class="badge post-card-badge">' + esc(meta.category || 'Travel') + '</span>' +
+              '</div>' +
+              '<div class="post-card-body">' +
+                '<h3 class="post-card-title">' + esc(meta.title) + '</h3>' +
+                '<p class="post-card-excerpt">' + esc(meta.excerpt) + '</p>' +
+                '<div class="post-card-footer">' +
+                  '<span class="post-card-avatar" aria-hidden="true">' + initial + '</span>' +
+                  '<span class="post-card-author">' + esc(meta.author) + '</span>' +
+                  '<span class="post-card-meta">' +
+                    '<span>' + formatDate(meta.date) + '</span>' +
+                    '<span class="dot" aria-hidden="true"></span>' +
+                    '<span>' + esc(meta.readTime) + '</span>' +
+                  '</span>' +
+                '</div>' +
+              '</div>';
+            grid.appendChild(card);
+          });
+        });
+    })();
+  </script>
+</body>
+</html>

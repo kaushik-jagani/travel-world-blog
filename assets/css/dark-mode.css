@@ -1,0 +1,222 @@
+/* ============================================================
+   DARK-MODE.CSS  -- Dark theme overrides
+   All variables use the new --sp-* / --t-* / --shadow-* names
+   ============================================================ */
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-bg:           #0f0f1a;
+  --color-bg-secondary: #161624;
+  --color-bg-tertiary:  #1e1e32;
+
+  /* Text */
+  --color-text:           #f0f0f8;
+  --color-text-secondary: #a8a8c0;
+  --color-text-muted:     #6b6b88;
+
+  /* Border */
+  --color-border:         rgba(255,255,255,0.08);
+  --color-border-strong:  rgba(255,255,255,0.15);
+
+  /* Primary unchanged; keep accent colours */
+  --color-primary-light:  rgba(16,185,129,0.12);
+  --color-primary-dark:   #34D399;
+
+  /* Accent */
+  --color-accent-light:   rgba(99,102,241,0.12);
+
+  /* Shadows */
+  --shadow-xs:   0 1px 2px rgba(0,0,0,0.5);
+  --shadow-sm:   0 2px 6px rgba(0,0,0,0.5);
+  --shadow-md:   0 4px 16px rgba(0,0,0,0.55);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,0.6);
+  --shadow-xl:   0 16px 48px rgba(0,0,0,0.65);
+  --shadow-hover: 0 8px 24px rgba(16,185,129,0.2);
+
+  /* Callout backgrounds */
+  --callout-info-bg:      rgba(16,185,129,0.08);
+  --callout-info-border:  #10B981;
+  --callout-tip-bg:       rgba(16,185,129,0.08);
+  --callout-tip-border:   #10B981;
+  --callout-warning-bg:   rgba(245,158,11,0.08);
+  --callout-warning-border: #F59E0B;
+}
+
+/* ---- Body ---- */
+[data-theme="dark"] body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ---- Header glassmorphism ---- */
+[data-theme="dark"] .site-header {
+  background: rgba(15,15,26,0.88);
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+[data-theme="dark"] .site-header.scrolled {
+  box-shadow: 0 1px 24px rgba(0,0,0,0.5);
+}
+
+/* ---- Logo ---- */
+[data-theme="dark"] .logo-text { color: #fff; }
+
+/* ---- Nav links ---- */
+[data-theme="dark"] .nav-link { color: var(--color-text-secondary); }
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active { color: var(--color-primary); }
+
+/* ---- Cards ---- */
+[data-theme="dark"] .card,
+[data-theme="dark"] .blog-card {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .blog-card:hover {
+  border-color: rgba(16,185,129,0.3);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---- Tag / badge ---- */
+[data-theme="dark"] .tag {
+  background: rgba(16,185,129,0.15);
+  color: #34D399;
+  border-color: rgba(16,185,129,0.2);
+}
+
+/* ---- Trending Reads sidebar ---- */
+[data-theme="dark"] .trending-reads {
+  background: var(--color-bg-secondary);
+  border-color: rgba(255,255,255,0.07);
+}
+[data-theme="dark"] .trending-card:hover { background: rgba(16,185,129,0.07); }
+
+/* ---- Sidebar widgets ---- */
+[data-theme="dark"] .sidebar-widget { background: var(--color-bg-secondary); border-color: var(--color-border); }
+[data-theme="dark"] .sidebar-widget-header { background: var(--color-bg-tertiary); border-color: var(--color-border); }
+
+/* ---- TOC ---- */
+[data-theme="dark"] .toc-wrapper {
+  background: linear-gradient(135deg, var(--color-bg-secondary), rgba(16,185,129,0.05));
+  border-color: rgba(16,185,129,0.1);
+}
+[data-theme="dark"] .toc-list li a:hover {
+  background: rgba(16,185,129,0.08);
+  color: #34D399;
+}
+
+/* ---- TOC accordion ---- */
+[data-theme="dark"] .toc-accordion { border-color: var(--color-border); }
+[data-theme="dark"] .toc-accordion-btn { background: var(--color-bg-secondary); color: var(--color-text); }
+[data-theme="dark"] .toc-accordion-content { background: var(--color-bg); }
+
+/* ---- FAQ ---- */
+[data-theme="dark"] .faq-item { border-color: var(--color-border); }
+[data-theme="dark"] .faq-question { background: var(--color-bg-secondary); color: var(--color-text); }
+[data-theme="dark"] .faq-question:hover { background: rgba(16,185,129,0.07); }
+[data-theme="dark"] .faq-answer { background: var(--color-bg); }
+[data-theme="dark"] .faq-answer-inner { color: var(--color-text-secondary); }
+
+/* ---- Subsection blocks ---- */
+[data-theme="dark"] .subsection-block {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .subsection-block:hover { border-color: rgba(16,185,129,0.2); }
+[data-theme="dark"] .subsection-title { color: #34D399; }
+
+/* ---- Content table ---- */
+[data-theme="dark"] .content-table-wrapper { border-color: var(--color-border); }
+[data-theme="dark"] .content-table td { border-color: var(--color-border); color: var(--color-text-secondary); }
+[data-theme="dark"] .content-table tbody tr:nth-child(even) td { background: var(--color-bg-tertiary); }
+[data-theme="dark"] .content-table tbody tr:hover td { background: rgba(16,185,129,0.07); }
+
+/* ---- Quote ---- */
+[data-theme="dark"] .content-quote {
+  background: linear-gradient(135deg, var(--color-bg-secondary), rgba(16,185,129,0.05));
+}
+[data-theme="dark"] .content-quote blockquote { color: var(--color-text); }
+
+/* ---- Callouts ---- */
+[data-theme="dark"] .callout-text { color: var(--color-text); }
+
+/* ---- Author bar ---- */
+[data-theme="dark"] .author-bar { border-color: var(--color-border); }
+[data-theme="dark"] .share-btn {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+[data-theme="dark"] .share-btn:hover {
+  background: rgba(16,185,129,0.1);
+  color: #34D399;
+  border-color: rgba(16,185,129,0.3);
+}
+
+/* ---- Post content ---- */
+[data-theme="dark"] .post-content h2 { border-color: var(--color-border); }
+[data-theme="dark"] .post-content h3 { color: #34D399; }
+[data-theme="dark"] .post-content li { color: var(--color-text-secondary); }
+
+/* ---- Hero image shadow ---- */
+[data-theme="dark"] .post-hero-img { box-shadow: 0 4px 24px rgba(0,0,0,0.6); }
+
+/* ---- Ad slots ---- */
+[data-theme="dark"] .ad-slot-article,
+[data-theme="dark"] .ad-slot-sidebar {
+  background: var(--color-bg-secondary);
+  border-color: rgba(255,255,255,0.07);
+}
+
+/* ---- Blog list header ---- */
+[data-theme="dark"] .blog-header { background: var(--color-bg-secondary); }
+
+/* ---- Category pills ---- */
+[data-theme="dark"] .cat-pill {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+[data-theme="dark"] .cat-pill:hover,
+[data-theme="dark"] .cat-pill.active {
+  background: rgba(16,185,129,0.15);
+  color: #34D399;
+  border-color: rgba(16,185,129,0.3);
+}
+
+/* ---- Footer ---- */
+[data-theme="dark"] .site-footer {
+  background: var(--color-bg-secondary);
+  border-color: rgba(255,255,255,0.06);
+}
+[data-theme="dark"] .footer-link { color: var(--color-text-secondary); }
+[data-theme="dark"] .footer-link:hover { color: var(--color-primary); }
+
+/* ---- Hero section ---- */
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #0a1a15 0%, #0d1f1a 100%);
+}
+
+/* ---- Mobile nav ---- */
+[data-theme="dark"] .mobile-nav {
+  background: rgba(15,15,26,0.98);
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* ---- Theme toggle button ---- */
+[data-theme="dark"] .icon-btn {
+  color: var(--color-text-secondary);
+}
+[data-theme="dark"] .icon-btn:hover {
+  background: var(--color-bg-tertiary);
+  color: var(--color-primary);
+}
+
+/* ---- Search bar (if present) ---- */
+[data-theme="dark"] .search-input {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+[data-theme="dark"] .search-input::placeholder { color: var(--color-text-muted); }
+[data-theme="dark"] .search-input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(16,185,129,0.15); }

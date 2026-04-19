@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel World &mdash; All Articles</title>
+  <meta name="description" content="Browse all Travel articles on Travel World &mdash; travel insights, market trends, and buying guides from cities worldwide.">
+  <meta property="og:title" content="Travel World &mdash; All Articles">
+  <meta property="og:description" content="Expert Travel articles covering travel markets, trends, and guides from cities around the world.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/blog">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/blog-list.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQFMWPTPDS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQFMWPTPDS');
+  </script>
+  <!-- Theme JS: must run before body renders -->
+  <script src="../assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="Travel World home">
+        <span class="logo-text">Travel<span class="logo-accent"> World</span></span>
+        <span class="logo-dot" aria-hidden="true"></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog" class="nav-link active">Travel</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Search -->
+        <div class="search-wrapper" role="search">
+          <div class="search-input-wrapper" id="search-input-wrapper">
+            <input type="search" id="search-input" class="search-input" placeholder="Search posts..." aria-label="Search posts" autocomplete="off">
+          </div>
+          <button id="search-toggle-btn" class="icon-btn" aria-label="Toggle search" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dark mode toggle -->
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode" type="button">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <!-- Hamburger (mobile) -->
+        <button id="hamburger-btn" class="icon-btn" aria-label="Open navigation menu" aria-expanded="false" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer overlay -->
+  <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile drawer -->
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+    <button id="drawer-close-btn" class="icon-btn drawer-close-btn" aria-label="Close menu" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <span class="drawer-logo">Travel<span> World</span></span>
+    <nav aria-label="Mobile navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/blog" class="nav-link">Travel</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- AD SLOT: Below header -->
+  <div class="ad-slot-below-header" aria-label="Advertisement">
+    <!-- AD SLOT -->
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="blog-hero" aria-label="Blog hero">
+      <div class="container">
+        <h1 class="blog-hero-title">All <span>Travel</span> Articles</h1>
+        <p class="blog-hero-tagline">Browse our full collection of travel insights, market analysis, and buying guides from cities worldwide.</p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Featured Post (dynamically injected) -->
+      <section aria-label="Featured post" id="featured-post-section"></section>
+
+      <!-- Posts Grid -->
+      <section aria-label="Latest posts">
+        <div class="posts-grid" id="posts-grid"></div>
+      </section>
+
+      <!-- Load More -->
+      <div class="load-more-wrapper">
+        <button id="load-more-btn" class="load-more-btn" type="button" aria-label="Load more posts">Load More</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- AD SLOT: Below posts grid, above footer -->
+  <div class="ad-slot-below-header" aria-label="Advertisement" style="margin-top:0;">
+    <!-- AD SLOT -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <a href="/" class="footer-logo">Travel<span> World</span></a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/blog" class="footer-link">Blog</a>
+        <a href="/about" class="footer-link">About</a>
+        <a href="/contact" class="footer-link">Contact</a>
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+        <a href="/disclaimer" class="footer-link">Disclaimer</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 GlobalInfoNest. All rights reserved. Empowering smarter travel decisions.</p>
+    </div>
+  </footer>
+
+  <script>
+    /**
+     * Blog List Page Script
+     * Fetches all post.json files, renders featured post + grid,
+     * and handles "Load More" pagination.
+     */
+    (function () {
+      'use strict';
+
+      function toAbsolutePath(path) {
+        if (!path) return '';
+        if (/^https?:\/\//i.test(path) || path.indexOf('//') === 0) return path;
+        if (path.charAt(0) === '/') return path;
+        return '/' + String(path).replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+      }
+
+      var PAGE_SIZE = 6;
+      var currentPage = 0;
+      var allMetas = [];
+
+      function formatDate(dateStr) {
+        try {
+          var d = new Date(dateStr + 'T00:00:00');
+          return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        } catch (e) { return dateStr; }
+      }
+
+      function esc(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+      }
+
+      /** Render the featured post */
+      function renderFeatured(meta) {
+        var section = document.getElementById('featured-post-section');
+        if (!section || !meta) return;
+        var imgSrc = toAbsolutePath(meta.coverImage);
+        section.innerHTML =
+          '<a href="/blog/' + esc(meta.slug) + '" class="featured-post" aria-label="Featured: ' + esc(meta.title) + '">' +
+            '<img class="featured-post-img" src="' + esc(imgSrc) + '" alt="' + esc(meta.title) + '" loading="lazy">' +
+            '<div class="featured-post-overlay" aria-hidden="true"></div>' +
+            '<div class="featured-post-body">' +
+              '<span class="featured-post-tag">Featured &middot; ' + esc(meta.category) + '</span>' +
+              '<h2 class="featured-post-title">' + esc(meta.title) + '</h2>' +
+              '<p class="featured-post-excerpt">' + esc(meta.excerpt) + '</p>' +
+              '<div class="featured-post-meta">' +
+                '<span>' + esc(meta.author) + '</span>' +
+                '<span aria-hidden="true">&middot;</span>' +
+                '<span>' + formatDate(meta.date) + '</span>' +
+                '<span aria-hidden="true">&middot;</span>' +
+                '<span>' + esc(meta.readTime) + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</a>';
+      }
+
+      /** Render a batch of post cards */
+      function renderCards(metas) {
+        var grid = document.getElementById('posts-grid');
+        if (!grid) return;
+
+        metas.forEach(function (meta) {
+          var initial = meta.author ? meta.author.charAt(0).toUpperCase() : 'A';
+          var imgSrc = toAbsolutePath(meta.coverImage);
+          var card = document.createElement('a');
+          card.href = '/blog/' + meta.slug;
+          card.className = 'post-card';
+          card.setAttribute('aria-label', meta.title);
+          card.innerHTML =
+            '<div class="post-card-img-wrapper">' +
+              '<img class="post-card-img" src="' + esc(imgSrc) + '" alt="' + esc(meta.title) + '" loading="lazy">' +
+              '<span class="badge post-card-badge">' + esc(meta.category) + '</span>' +
+            '</div>' +
+            '<div class="post-card-body">' +
+              '<h3 class="post-card-title">' + esc(meta.title) + '</h3>' +
+              '<p class="post-card-excerpt">' + esc(meta.excerpt) + '</p>' +
+              '<div class="post-card-footer">' +
+                '<span class="post-card-avatar" aria-hidden="true">' + initial + '</span>' +
+                '<span class="post-card-author">' + esc(meta.author) + '</span>' +
+                '<span class="post-card-meta">' +
+                  '<span>' + formatDate(meta.date) + '</span>' +
+                  '<span class="dot" aria-hidden="true"></span>' +
+                  '<span>' + esc(meta.readTime) + '</span>' +
+                '</span>' +
+              '</div>' +
+            '</div>';
+          grid.appendChild(card);
+        });
+      }
+
+      /** Load the next page of post cards */
+      function loadNextPage() {
+        var start = currentPage * PAGE_SIZE;
+        var batch = allMetas.slice(start, start + PAGE_SIZE);
+        if (batch.length) {
+          renderCards(batch);
+          currentPage++;
+        }
+
+        var btn = document.getElementById('load-more-btn');
+        if (btn) {
+          if (currentPage * PAGE_SIZE >= allMetas.length) {
+            btn.disabled = true;
+            btn.textContent = 'All posts loaded';
+          }
+        }
+      }
+
+      /** Main init */
+      function init() {
+        // index.json is a flat array of listing metadata &mdash; no individual fetches needed
+        fetch('/data/posts/index.json')
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .catch(function () { return []; })
+          .then(function (posts) {
+          // Sort by date descending (newest first)
+          posts.sort(function (a, b) { return (b.date || '').localeCompare(a.date || '') || (b.id || 0) - (a.id || 0); });
+
+          allMetas = posts.map(function (p) {
+            return {
+              slug: p.slug,
+              title: p.title || 'Untitled Post',
+              author: p.author || 'Travel World Team',
+              date: p.date || '',
+              readTime: p.readTime || '5 min read',
+              category: p.category || 'Travel',
+              excerpt: p.excerpt || '',
+              coverImage: toAbsolutePath(p.coverImage || ''),
+              featured: !!p.featured
+            };
+          });
+
+          if (!allMetas.length) {
+            document.getElementById('featured-post-section').innerHTML = '';
+            document.getElementById('posts-grid').innerHTML = '<p style="color:var(--color-text-muted)">No posts available yet.</p>';
+            var emptyBtn = document.getElementById('load-more-btn');
+            if (emptyBtn) {
+              emptyBtn.disabled = true;
+              emptyBtn.textContent = 'No posts';
+            }
+            return;
+          }
+
+          // Find featured post
+          var featured = allMetas.find(function (m) { return m.featured; }) || allMetas[0];
+          renderFeatured(featured);
+
+          // Non-featured posts to grid
+          var gridMetas = allMetas.length === 1
+            ? allMetas.slice()
+            : allMetas.filter(function (m) { return m !== featured; });
+          allMetas = gridMetas;
+
+          loadNextPage();
+
+          // Bind load more
+          var btn = document.getElementById('load-more-btn');
+          if (btn) {
+            btn.addEventListener('click', loadNextPage);
+            if (allMetas.length <= PAGE_SIZE) {
+              btn.disabled = true;
+              btn.textContent = 'All posts loaded';
+            }
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+
+    })();
+  </script>
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>
