@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* Post page wrapper */
-.post-page { padding: var(--sp-10) 0 var(--sp-12); }
+.post-page { padding: var(--sp-10) 0 var(--sp-12); max-width: 100%; }
 
 /* Three-column layout: TOC | Content | Sidebar */
 .post-layout {
@@ -12,6 +12,9 @@
   grid-template-columns: 220px 1fr 300px;
   gap: var(--sp-6);
   align-items: start;
+}
+.post-layout > * {
+  min-width: 0;
 }
 
 /* Left TOC column -- sticky */
@@ -224,6 +227,11 @@
   font-size: var(--font-size-base);
   color: var(--color-text);
   line-height: var(--line-height-body);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .post-content h2 {
@@ -274,7 +282,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-  min-width: 480px;
+  min-width: 320px;
 }
 .content-table th {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
@@ -470,4 +478,6 @@
   .post-hero-img { height: 200px; }
   .breadcrumb .current { max-width: 180px; }
   .post-title { font-size: clamp(22px, 6vw, 30px); }
+  .callout { flex-direction: column; gap: var(--sp-2); }
+  .content-quote { padding: var(--sp-5) var(--sp-5) var(--sp-4) var(--sp-6); }
 }
