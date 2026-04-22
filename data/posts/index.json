@@ -1,5 +1,17 @@
 [
   {
+    "id": 4,
+    "slug": "solo-travel-guide-2026",
+    "title": "The Ultimate 2026 Solo Travel Guide: Mastering the Art of Traveling Alone",
+    "author": "Sarah Mitchell",
+    "date": "2026-04-22",
+    "readTime": "12 min read",
+    "category": "Travel",
+    "excerpt": "Embark on the journey of a lifetime with our comprehensive 2026 solo travel guide. Learn insider tips for staying safe and budgeting wisely.",
+    "coverImage": "/assets/images/posts/solo-travel-guide-2026/cover.jpg",
+    "featured": true
+  },
+  {
     "id": 3,
     "slug": "all-inclusive-family-vacation-guide-2026",
     "title": "All-Inclusive Family Vacation Guide 2026: Plan Easy and Stress-Free Trips",
@@ -9,7 +21,7 @@
     "category": "Travel",
     "excerpt": "Discover how all-inclusive family vacations work, compare resort types, and plan a stress-free trip with practical tips.",
     "coverImage": "/assets/images/posts/all-inclusive-family-vacation-guide-2026/cover.jpg",
-    "featured": true
+    "featured": false
   },
   {
     "id": 2,
