@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var GA_ID      = 'G-5PFRZ31THJ'; // G-WQFMWPTPDS
+  var GA_ID      = 'G-EQCRHDEN5M'; // G-WQFMWPTPDS
   var ALL_POSTS  = []; // loaded from /data/posts/index.json (flat array with listing meta)
 
   function loadIndex() {
